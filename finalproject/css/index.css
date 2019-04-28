@@ -1,0 +1,245 @@
+
+ * {
+    box-sizing: border-box 1;
+  }
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.center{
+	margin:auto;
+	width:50%;
+}
+body{
+    color: #252C40;
+    font-family: 'Lucida Sans', 'Lucid;a Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.0em;
+    text-shadow:1px 1px #252C40;
+    box-sizing: content-box;
+    background-image:url('../media/earth.jpeg'); 
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+article{
+    max-width: 750px; 
+}
+section{
+    flex:1;
+    flex-wrap: nowrap;
+    background-color:rgb(250, 238, 223);
+    opacity:0.9;
+    padding:1%;
+    min-width:250px;
+    max-width: 700px;
+    border:5px groove rgb(13, 3, 70);
+    border-radius:25px;
+    margin-right:1%;
+
+}
+aside:hover{
+    animation-name:rock;
+    animation-duration:4s;
+}
+
+aside {
+    background:rgb(250, 238, 223);
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    border: #252C40;
+}
+
+a:link{
+    color: rgb(92, 20, 2);
+    text-decoration: underline;
+
+}
+a:visited{
+    color: rgb(28, 93, 112);
+    text-decoration:underline;
+
+}
+a:hover{
+    color:#F4F4F2;
+    background-color:#252C40;
+    text-decoration:none;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:2.0em;
+    color:#252C40;
+    text-shadow: 2px 2px #1B676B;
+    box-sizing: border-box 1;
+    text-align: center;
+    background: rgb(250, 238, 223);
+    width: 450px;
+   
+   
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:2.0em;
+    color:#252C40;
+    text-shadow: 2px 2px #1B676B;
+    box-sizing: border-box 1;
+    text-align: center;
+    background: rgb(250, 238, 223);
+    width: 450px;
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:1.5em;
+    color:#252C40;
+    text-shadow: 2px 2px #1B676B;
+    box-sizing: border-box 1;
+    text-align: center;
+    background: rgb(250, 238, 223);
+    width: 450px;
+}
+
+p{
+    margin-left: 15px;
+}
+nav {
+	margin:50px auto; 
+	text-align: center;
+}
+
+nav ul {
+    background: linear-gradient(0deg, white, rgb(250, 238, 223), white); 
+	box-shadow: 6px 6px 6px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+    list-style: none;
+    position: relative;
+	color:black;
+	font-weight:900;
+	width:300px;
+	display:inline-table;
+}
+nav ul li {
+    display:inline-table;
+
+}
+nav ul li a {
+	display: block; 
+    padding: 50px 40px;
+	color:rgb(13, 3, 70); 
+	text-decoration: none;
+}
+nav ul li:hover {
+    background: linear-gradient(180deg, white, rgb(250, 238, 223), white); 
+}
+nav ul li:hover a {
+	color:black;
+}
+nav ul li:hover > ul {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+	
+nav ul ul {
+	display: none;
+    background: linear-gradient(180deg, white,  rgb(250, 238, 223)) ; 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	z-index:10;
+}
+nav ul ul li {
+	display:block; 
+	border-top: 1px solid #757575;
+	border-bottom: 1px solid #757575; 
+	position: relative;
+}
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #757575;
+}	
+nav ul ul li a:hover {
+	background: rgb(24, 86, 110);
+	color:rgb(13, 3, 70);
+}
+
+footer{
+    margin-top:200px;
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: rgb(250, 238, 223); 
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+Header{
+    flex:1;
+    width: 450px;
+    background-color:rgb(250, 238, 223);
+    opacity:0.9;
+    padding:1%;
+    min-width:250px;
+    border:5px groove rgb(13, 3, 70);
+    border-radius:25px;
+    margin-right:1%;
+}
+@keyframes rock{
+    0% {transform:rotate(20deg);}
+    25% {transform:rotate(-20deg);}
+    50% {transform:rotate(20deg);}
+    100% {transform:rotate(-20deg);}
+}
+[class*="col-"] {
+    width: 100%; /* this is being overriden in tablet and desktop */
+    float:left; /* setting defaults for everything including tablet and desktop */
+    padding:15px; /* setting defaults for everything including tablet and desktop */
+
+}
+@media only screen and (min-width: 600px) {
+/* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+
+
+   

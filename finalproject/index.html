@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="7 Wonders of the World: taj mahal, machu picchu, traveling, best of our world, trips to take, around the world" />
+            <meta name="keywords" content="7 Wonders, Taj mahal, chichen itza, great wall, petra, machu picchu, christ-redeemer, roman colosseum, , earth" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <title>Seven Wonders of the World</title>
+            <link rel="stylesheet" href="css/index.css" media="all"/>
+            <link rel="stylesheet" href="css/myprint.css" media="print"/>
+            
+        
+    </head>
+    <body>
+        <article>
+            <hr />
+            <header>Seven Wonders of the World</header>
+            <hr />
+           
+             <section>
+            <h1>Historic and Iconic Wonders Around Our World</h1>
+              <p>Scorll through the photos below to see the 7 wonders of the world.</p>
+              <section  class="col-12 col-m-12"> 
+                    <button type="button" id="previous" style="display:inline-block;margin-right:10%;" onclick="changeImage(-1)">Previous</button>
+                    <button type="button" id="next" onclick="changeImage(1)" >Next</button>
+                </section>	
+                <section class="col-12 col-m-12" >	
+                    <p style=width:30%;margin-left:5%;"><img alt="photo slideshow" id="mySlides" src="media/taj.jpeg" style="max-width:150%; min-width:200px; height:auto;padding:10%; 
+                      background:rgb(8, 3, 59); box-shadow:5px 5px white;"></p>
+                </section>
+            
+                <h3>Video Links on the Seven Wonders and other Historic Landmarks </h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=_00CC7BIHhg&t=42s">The New 7 Wonders of the World</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=TTU8JqLsaQc">5 Landmarks That Deserve To Be Called The 8TH WONDER Of The World</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=viIuyU6Wnkk">11 Historical Places That Are Lucky To Still Exist</a></li>
+                </ul>
+               
+                
+    <section>
+          <h2>Where are they located?</h2>
+          <p>Below is a list of the 7 wonders. Each is located in a different country. Follow the links to learn more about these beautiful countries 
+              and what else you could see.
+          </p>
+          <section>
+          <nav>
+            <ul>
+                <li><a href="#">Follow the links to find out more about the 7 Wonders</a>
+                                    <ul>
+                                        <li><a href="https://www.chinahighlights.com/greatwall/">The Great Wall of China</a></li>
+                                        <li><a href="https://www.britannica.com/topic/Christ-the-Redeemer">Christ the Redeemer Statue</a></li>
+                                        <li><a href="https://whc.unesco.org/en/list/274">Machu Picchu</a></li>
+                                        <li><a href="https://whc.unesco.org/en/list/483">Chichen Itza</a></li>
+                                        <li><a href="https://www.history.com/topics/ancient-history/colosseum">The Roman Colosseum</a></li>
+                                        <li><a href="https://www.history.com/topics/india/taj-mahal">Taj Mahal</a></li>
+                                        <li><a href="https://www.nationalgeographic.com/travel/world-heritage/petra-jordan/">Petra</a></li>
+                                    </ul>
+                </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Follow the links to learn more about tourism in each Country</a>
+                                        <ul>
+                                            <li><a href="https://www.topchinatravel.com/china-guide/china-tourism/">China (Great Wall of China)</a></li>
+                                            <li><a href="http://www.visitbrasil.com/en/">Brazil (Christ-the-Redeemer)</a></li>
+                                            <li><a href="https://www.peru.travel/en-us/">Peru (Machu Picchu)</a></li>
+                                            <li><a href="https://www.visitmexico.com/en/">Mexico (Chichen Itza)</a></li>
+                                            <li><a href="http://www.italyheaven.co.uk/rome/home.html">Italy (The Roman Colosseum)</a></li>
+                                            <li><a href="https://www.india-tourism.net/">India (Taj Mahal)</a></li>
+                                            <li><a href="https://www.lonelyplanet.com/jordan">Jordan (Petra)</a></li>
+                                        </ul>
+                    </li>
+                    </ul>
+                    </nav>
+                
+          </section>
+          <aside>
+                <img alt="Ocean" src="media/ocean.jpeg" style="padding:5px; max-width:100%;" /> 
+            </aside>
+        
+    </section>
+</article>
+        
+    
+        <footer> 
+            <div class="icon-bar">
+        <p>
+        <a href="https://www.pinterest.com/ericha121/"><i class="fa fa-pinterest"></i></a> 
+        <a href="https://www.linkedin.com/in/emily-richardson-b7894258/"><i class="fa fa-linkedin-square"></i></a> 
+        <a href="https://www.facebook.com/emily.richardson.9655"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/emilyjrichardson/"><i class="fa fa-instagram"></i></a>
+        </p>
+        <p style="text-align:right;"> <small>&copy; Emily Richardson April 29th, 2019. <br/>
+            </small></p>
+        </div> 
+        </footer>
+        
+    
+   
+            <script>
+                    var Image = new Array("media/great-wall.jpg", "media/christ-redeemer.jpeg","media/taj.jpeg", "media/machu.jpeg", "media/petra.jpeg", "media/roman.jpeg", "media/chichen.jpg");
+                    var ImageNum=0;
+                    var ImageLength=Image.length - 1;
+                    function changeImage(number){
+                        ImageNum = ImageNum + number;
+                        if (ImageNum > ImageLength)
+                             ImageNum=0;
+                        if (ImageNum < 0 )
+                             ImageNum=ImageLength;
+                    document.getElementById("mySlides").src = Image[ImageNum];
+                    return;
+                    }
+                </script>
+</body>
+</html>
